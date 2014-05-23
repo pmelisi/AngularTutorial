@@ -1,0 +1,45 @@
+﻿<h2>{{action}} Todo</h2>
+<form name="form" class="form-horizontal">
+    <div class="control-group" ng-class="{'has-error': form.Text.$invalid}">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label" for="Text">Todo</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <input class="form-control" type="text" ng-model="item.Text" id="Text" name="Text" />
+            </div>
+        </div>
+    </div>
+    <div class="control-group" ng-class="{'has-error': form.DueDate.$invalid}">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label" for="DueDate">Due</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <input class="form-control" type="text" ng-model="item.DueDate" id="DueDate" name="DueDate" />
+            </div>
+        </div>
+    </div>
+    <div class="control-group" ng-class="{'has-error': form.Priority.$invalid}">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label" for="Priority">Priority</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <input class="form-control" type="number" ng-model="item.Priority" id="Priority" name="Priority" />
+            </div>
+        </div>
+    </div>
+    <div class="form-actions">
+        <button ng-click="save()" class="btn btn-primary">
+            {{action}}
+        </button>
+        <a href="#/" class="btn">Cancel</a>
+    </div>
+</form>
