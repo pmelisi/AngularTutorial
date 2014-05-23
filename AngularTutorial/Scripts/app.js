@@ -1,9 +1,9 @@
 ﻿var TodoApp = angular.module("TodoApp", ["ngResource", "ngRoute"]).
     config(function ($routeProvider) {
         $routeProvider.
-            when('/', { controller: ListCtrl, templateUrl: 'list.html' }).
-            when('/new', { controller: CreateCtrl, templateUrl: 'details.html' }).
-            when('/edit/:editId', { controller: EditCtrl, templateUrl: 'details.html' }).
+            when('/', { controller: ListCtrl, templateUrl: '/Views/list.html' }).
+            when('/new', { controller: CreateCtrl, templateUrl: '/Views/details.html' }).
+            when('/edit/:editId', { controller: EditCtrl, templateUrl: '/Views/details.html' }).
             otherwise({ redirectTo: '/' });
     });
 
